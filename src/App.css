@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===================== THEME ===================== */
+
+.dark-mode {
+  color: #fff;
+}
+
+.light-mode {
+  color: #000;
+}
+
+/* ===================== BACKGROUND ===================== */
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  background: linear-gradient(270deg, #1e1e2f, #29293d, #3d3d5c, #1e1e2f);
+  background-size: 800% 800%;
+  animation: gradientFlow 15s ease infinite;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ===================== MAIN CONTAINER ===================== */
+
+.container {
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .container {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.light-mode .container {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+}
+
+/* ===================== LOGO & TOGGLE ===================== */
+
+.logo {
+  height: 26px;
+}
+
+.btn-outline-light,
+.btn-outline-dark {
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* ===================== INPUT ===================== */
+
+.input-group input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.input-group .btn {
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* ===================== PROFILE CARD ===================== */
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.light-mode .profile-card {
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin-bottom: 10px;
+}
+
+/* ===================== LIST ===================== */
+
+.list-group-item {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.list-group-item a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.badge {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
